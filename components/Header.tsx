@@ -1,11 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styles from '../styles/Header.module.css'
 
-type HeaderProps = {
-  advanced: boolean
-  score?: number
-}
-
 export default function Header(props) {
   return (
     <div className={styles.header}>
