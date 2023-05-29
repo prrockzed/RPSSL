@@ -21,7 +21,7 @@ export default function Play(props) {
         <img src="/bg-triangle.svg" />
       )}
       <PlayButtons
-        onCLick={(value) => setselected(value)}
+        onCLick={(value) => props.setselected(value)}
         advanced={props.advanced}
       />
     </motion.div>
