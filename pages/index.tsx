@@ -7,6 +7,7 @@ import Rules from '../components/Rules.tsx'
 export default function Home() {
   const [advancedMode, setAdvancedMode] = useState(false)
   const [open, setOpen] = useState(false)
+  const [selected, setSelected] = useState(-1)
 
   const changeMode = () => {
     setAdvancedMode(!advancedMode)
@@ -27,7 +28,12 @@ export default function Home() {
         <div className='rules'>Rules</div>
       </footer>
 
-      <Play advanced={advancedMode}/>
+      <Play
+        selected={selected}
+        setselected={(value) => setSelected(value)}
+        advanced={advancedMode}
+      />
+
       <Rules
         open={open}
         advanced={advancedMode}
