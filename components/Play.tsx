@@ -5,7 +5,7 @@ import PlayButtons from './PlayButtons.tsx'
 
 export default function Play(props) {
   return (
-<motion.div
+    <motion.div
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{
@@ -16,9 +16,9 @@ export default function Play(props) {
       className={styles.container}
     >
       {props.advanced ? (
-        <img src="/bg-pentagon.svg" />
+        <img src='/bg-pentagon.svg' />
       ) : (
-        <img src="/bg-triangle.svg" />
+        <img src='/bg-triangle.svg' />
       )}
       <PlayButtons
         onCLick={(value) => props.setselected(value)}
