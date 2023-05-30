@@ -16,7 +16,6 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-evenly;
-
   margin: 0 15px;
   align-items: center;
   height: 100%;
@@ -27,7 +26,7 @@
   margin-top: 15px;
 }
 
-.house {
+.computer {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.226);
   width: 100px;
@@ -45,33 +44,6 @@
 }
 .result h2 {
   font-size: 33px;
-}
-.win {
-  position: relative;
-  border-radius: 50%;
-  transition: 0.5s;
-}
-.win::before,
-.win::after {
-  content: "";
-  background: hsl(229, 25%, 31%);
-
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100%;
-  border-radius: 50%;
-}
-.win::before {
-  z-index: -1;
-  animation: anim 1.5s infinite;
-}
-
-.win::after {
-  z-index: -2;
-
-  animation: anim2 1.5s infinite;
 }
 
 .playBtn {
@@ -141,16 +113,12 @@
     margin-bottom: 35px;
   }
   .btn,
-  .house {
+  .computer {
     height: 200px;
     width: 200px;
   }
   .btn img {
     transform: scale(1.3);
-  }
-  .win {
-    height: 200px;
-    width: 200px;
   }
 }
 @media screen and (max-height: 600px) {

@@ -13,7 +13,7 @@ export default function PlayButtons(props) {
             classN={styles.scissor}
             lid='scissor'
           >
-            <img src='/icon-scissors.svg' alt='' />
+            <img src='/icon-scissor.svg' alt='' />
           </Button>
           <Button onClicK={() => props.onCLick(3)} classN={styles.spock}>
             {' '}
@@ -32,7 +32,7 @@ export default function PlayButtons(props) {
       ) : (
         <div className={styles.twogrid}>
           <Button onClicK={() => props.onCLick(0)} classN={styles.sci2} lid='sci'>
-            <img src='/icon-scissors.svg' alt='' />
+            <img src='/icon-scissor.svg' alt='' />
           </Button>
           <Button onClicK={() => props.onCLick(1)} classN={styles.paper2} lid='paper'>
             <img src='/icon-paper.svg' alt='' />

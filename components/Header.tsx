@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import styles from '../styles/Header.module.css'
 
 export default function Header(props) {
@@ -7,7 +7,7 @@ export default function Header(props) {
       <div className={props.advanced ? styles.advancedTitle : styles.title}>
         <div>Rock</div>
         <div>Paper</div>
-        <div>Scissors</div>
+        <div>Scissor</div>
         {props.advanced && (
           <>
             <div>Lizard</div>

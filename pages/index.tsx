@@ -45,7 +45,7 @@ export default function Home() {
       )}
 
       <Rules
-        open={open}
+        notclosed={open}
         advanced={advancedMode}
         setopen={() => setOpen(!open)}
       />
