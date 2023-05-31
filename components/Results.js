@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { randomInt } from '../shared/randomInt'
-import { GameRules } from '../shared/rules'
+import { RandomInt } from './RandomInt'
+import { GameRules } from './GameRules'
 import styles from '../styles/Results.module.css'
 import styles2 from '../styles/Play.module.css'
 import Button from './Button'
@@ -11,7 +11,7 @@ export default function Results({ selected, setselected, setscore, advanced }) {
   const [computer, setComputer] = useState('')
 
   useEffect(() => {
-    const randomNum = randomInt(advanced ? 5 : 3)
+    const randomNum = RandomInt(advanced ? 5 : 3)
     const userSelected = GameRules[selected].value
 
     setTimeout(() => {

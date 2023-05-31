@@ -1,3 +1,3 @@
-export const randomInt = function (n) {
+export const RandomInt = function (n) {
   return Math.floor(Math.random() * n);
 };
