@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import Header from '../components/Header.tsx'
-import Results from '../components/Results.tsx'
-import Play from '../components/Play.tsx'
-import Rules from '../components/Rules.tsx'
+import Header from '../components/Header'
+import Results from '../components/Results'
+import Play from '../components/Play'
+import Rules from '../components/Rules'
 
 export default function Home() {
   const [advancedMode, setAdvancedMode] = useState(false)

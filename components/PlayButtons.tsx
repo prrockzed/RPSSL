@@ -1,11 +1,10 @@
-import { motion } from 'framer-motion'
 import React from 'react'
 import styles from '../styles/Play.module.css'
-import Button from './Button.tsx'
+import Button from './Button'
 
 export default function PlayButtons(props) {
   return (
-    <motion.div className={styles.playbuttons}>
+    <div className={styles.playbuttons}>
       {props.advanced ? (
         <div className={styles.threegrid}>
           <Button
@@ -15,11 +14,10 @@ export default function PlayButtons(props) {
           >
             <img src='/icon-scissor.svg' alt='' />
           </Button>
-          <Button onClicK={() => props.onCLick(3)} classN={styles.spock}>
-            {' '}
+          <Button onClicK={() => props.onCLick(3)} classN={styles.spock} lid='spock'>
             <img src='/icon-spock.svg' alt='' />
           </Button>
-          <Button onClicK={() => props.onCLick(4)} classN={styles.lizard}>
+          <Button onClicK={() => props.onCLick(4)} classN={styles.lizard} lid='lizard'>
             <img src='/icon-lizard.svg' alt='' />
           </Button>
           <Button onClicK={() => props.onCLick(1)} classN={styles.paper} lid='paper'>
@@ -42,6 +40,6 @@ export default function PlayButtons(props) {
           </Button>
         </div>
       )}
-    </motion.div>
+    </div>
   )
 }

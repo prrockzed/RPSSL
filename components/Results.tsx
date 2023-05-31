@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import { randomInt } from '../shared/randomInt'
 import { GameRules } from '../shared/rules'
@@ -36,29 +35,29 @@ export default function Results({ selected, setselected, setscore, advanced }) {
     <div className={show ? styles.results : styles.pending}>
       <div className={styles.pick}>
         <h3>You Picked</h3>
-        <motion.div>
+        <div>
           <Button
-            classN={`${styles2[GameRules[selected].value]} ${styles.btn}`}
+            classN={`${styles2[GameRules[selected].value]} ${styles.btn}`} lid='user'
           >
             <img src={`/icon-${GameRules[selected].value}.svg`} alt='' />
           </Button>
-        </motion.div>
+        </div>
       </div>
 
       <div className={styles.pick}>
         <h3>Computer Picked</h3>
-        <motion.div>
+        <div>
           {computer && (
-            <Button classN={`${styles2[computer]} ${styles.btn}`}>
+            <Button classN={`${styles2[computer]} ${styles.btn}`} lid='computer'>
               <img src={`/icon-${computer}.svg`} alt='' />
             </Button>
           )}
-        </motion.div>
+        </div>
       </div>
 
       <div className={styles.result}>
         {show && (
-          <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}>
+          <div>
             <h2>You {result}</h2>
             <div
               className={styles.playBtn}
@@ -69,7 +68,7 @@ export default function Results({ selected, setselected, setscore, advanced }) {
             >
               Play again
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>
