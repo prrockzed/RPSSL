@@ -15,6 +15,10 @@ export default function Home() {
     setAdvancedMode(!advancedMode)
   }
 
+  const toggle = () => {
+    setOpen(!open)
+  }
+
   return (
     <div>
       <Head>
@@ -22,13 +26,15 @@ export default function Home() {
       </Head>
 
       <Header advanced={advancedMode} score={score} />
-
       <footer>
         <div onClick={changeMode} className='modes'>
-          {advancedMode ? 'Advanced' : 'Normal'} Mode
+          Go to {advancedMode ? 'Normal' : 'Advanced'} Mode
         </div>
-        <div className='rules'>Rules</div>
       </footer>
+      <div id='modal' className='rules' onClick={toggle}>
+        Rules
+      </div>
+      {open ? <Rules advanced={advancedMode} toggle={toggle} /> : null}
 
       {selected >= 0 ? (
         <Results
@@ -43,12 +49,6 @@ export default function Home() {
           advanced={advancedMode}
         />
       )}
-
-      <Rules
-        notclosed={open}
-        advanced={advancedMode}
-        setopen={() => setOpen(!open)}
-      />
     </div>
   )
 }

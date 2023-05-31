@@ -46,3 +46,9 @@ footer {
   border-radius: 8px;
   text-transform: uppercase;
 }
+
+.rules {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
