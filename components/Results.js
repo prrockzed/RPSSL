@@ -37,9 +37,13 @@ export default function Results({ selected, setselected, setscore, advanced }) {
         <h3>You Picked</h3>
         <div>
           <Button
-            classN={`${styles2[GameRules[selected].value]} ${styles.btn}`} lid='user'
+            classN={`${styles2[GameRules[selected].value]} ${styles.btn}`}
+            lid='user'
           >
-            <img src={`/icon-${GameRules[selected].value}.svg`} alt='' />
+            <img
+              src={`../public/icon-${GameRules[selected].value}.svg`}
+              alt=''
+            />
           </Button>
         </div>
       </div>
@@ -48,8 +52,11 @@ export default function Results({ selected, setselected, setscore, advanced }) {
         <h3>Computer Picked</h3>
         <div>
           {computer && (
-            <Button classN={`${styles2[computer]} ${styles.btn}`} lid='computer'>
-              <img src={`/icon-${computer}.svg`} alt='' />
+            <Button
+              classN={`${styles2[computer]} ${styles.btn}`}
+              lid='computer'
+            >
+              <img src={`../public/icon-${computer}.svg`} alt='' />
             </Button>
           )}
         </div>
