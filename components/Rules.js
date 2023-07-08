@@ -12,9 +12,9 @@ const Rules = ({ toggle, advanced }) => {
           </button>
         </div>
         {advanced ? (
-          <img src='/image-rules-bonus.svg' alt='rules for advanced' />
+          <img src='./image-rules-bonus.svg' alt='rules for advanced' />
         ) : (
-          <img src='/image-rules.svg' alt='rules for normal' />
+          <img src='./image-rules.svg' alt='rules for normal' />
         )}
       </div>
     </div>,

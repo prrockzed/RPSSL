@@ -41,7 +41,7 @@ export default function Results({ selected, setselected, setscore, advanced }) {
             lid='user'
           >
             <img
-              src={`../public/icon-${GameRules[selected].value}.svg`}
+              src={`./icon-${GameRules[selected].value}.svg`}
               alt=''
             />
           </Button>
@@ -56,7 +56,7 @@ export default function Results({ selected, setselected, setscore, advanced }) {
               classN={`${styles2[computer]} ${styles.btn}`}
               lid='computer'
             >
-              <img src={`../public/icon-${computer}.svg`} alt='' />
+              <img src={`./icon-${computer}.svg`} alt='' />
             </Button>
           )}
         </div>
